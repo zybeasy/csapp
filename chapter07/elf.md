@@ -53,10 +53,10 @@ section header table 开始地址是14704， 共有29个section header， 我们
 >
 > #### .shstrtab header内容：
 >
-> 1032 **00004070**: <span style="border-bottom:3px solid red;">1100 0000</span> 0300 0000 0000 0000 0000 0000  ................
-> 1033 00004080: 0000 0000 0000 0000  <span style="border-bottom:3px solid red;">6038 0000 0000 0000</span>  ........`8......
-> 1034 00004090: <span style="border-bottom:3px solid red;">0c01 0000 0000 0000</span> 0000 0000 0000 0000  ................
-> 1035 000040a0: 0100 0000 0000 0000 0000 0000 0000 0000  ................
+> 1032 **00004070**: <span style="border-bottom:3px solid red;">1100 0000</span> 0300 0000 0000 0000 0000 0000  ................</br>
+> 1033 00004080: 0000 0000 0000 0000  <span style="border-bottom:3px solid red;">6038 0000 0000 0000</span>  ........`8...... </br>
+> 1034 00004090: <span style="border-bottom:3px solid red;">0c01 0000 0000 0000</span> 0000 0000 0000 0000  ................</br>
+> 1035 000040a0: 0100 0000 0000 0000 0000 0000 0000 0000  ................</br>
 
  当前系统是little endian，所以.shstrtab section的name在.shstrtab section `0x11`开始处。
 .shstrtab section开始于`0x3860`， 则.shstrtab section 那么是开始于 (0x3860 + 0x11)的字符串。
@@ -66,23 +66,23 @@ section header table 开始地址是14704， 共有29个section header， 我们
 >
 > #### .shstrtab 内容：
 >
-> 903 **00003860**:  <span style="border-bottom:3px solid red;">00</span>2e 7379 6d74 6162 002e 7374 7274 6162  ..symtab..strtab	开始`\0`
-> 904 00003870: 00 <span style="border-bottom:3px solid red;">2e 7368 7374 7274 6162 00</span>2e 696e 7465  . <span style="border-bottom:3px solid red;">.shstrtab.</span>.inte	最后一个'.'是无法打印的\0
-> 905 00003880: 7270 002e 6e6f 7465 2e67 6e75 2e70 726f  rp..note.gnu.pro
-> 906 00003890: 7065 7274 7900 2e6e 6f74 652e 676e 752e  perty..note.gnu.
-> 907 000038a0: 6275 696c 642d 6964 002e 6e6f 7465 2e41  build-id..note.A
-> 908 000038b0: 4249 2d74 6167 002e 676e 752e 6861 7368  BI-tag..gnu.hash
-> 909 000038c0: 002e 6479 6e73 796d 002e 6479 6e73 7472  ..dynsym..dynstr
-> 910 000038d0: 002e 676e 752e 7665 7273 696f 6e00 2e67  ..gnu.version..g
-> 911 000038e0: 6e75 2e76 6572 7369 6f6e 5f72 002e 7265  nu.version_r..re
-> 912 000038f0: 6c61 2e64 796e 002e 696e 6974 002e 706c  la.dyn..init..pl
-> 913 00003900: 7400 2e70 6c74 2e67 6f74 002e 7465 7874  t..plt.got..text
-> 914 00003910: 002e 6669 6e69 002e 726f 6461 7461 002e  ..fini..rodata..
-> 915 00003920: 6568 5f66 7261 6d65 5f68 6472 002e 6568  eh_frame_hdr..eh
-> 916 00003930: 5f66 7261 6d65 002e 696e 6974 5f61 7272  _frame..init_arr
-> 917 00003940: 6179 002e 6669 6e69 5f61 7272 6179 002e  ay..fini_array..
-> 918 00003950: 6479 6e61 6d69 6300 2e64 6174 6100 2e62  dynamic..data..b
-> 919 00003960: 7373 002e 636f 6d6d 656e 7400  <span style="border-bottom:3px solid red;">00</span>00 0000  ss..comment.....	以`\0`结束
+> 903 **00003860**:  <span style="border-bottom:3px solid red;">00</span>2e 7379 6d74 6162 002e 7374 7274 6162  ..symtab..strtab	开始`\0`</br>
+> 904 00003870: 00 <span style="border-bottom:3px solid red;">2e 7368 7374 7274 6162 00</span>2e 696e 7465  . <span style="border-bottom:3px solid red;">.shstrtab.</span>.inte	最后'.'是无法打印的\0</br>
+> 905 00003880: 7270 002e 6e6f 7465 2e67 6e75 2e70 726f  rp..note.gnu.pro</br>
+> 906 00003890: 7065 7274 7900 2e6e 6f74 652e 676e 752e  perty..note.gnu.</br>
+> 907 000038a0: 6275 696c 642d 6964 002e 6e6f 7465 2e41  build-id..note.A</br>
+> 908 000038b0: 4249 2d74 6167 002e 676e 752e 6861 7368  BI-tag..gnu.hash</br>
+> 909 000038c0: 002e 6479 6e73 796d 002e 6479 6e73 7472  ..dynsym..dynstr</br>
+> 910 000038d0: 002e 676e 752e 7665 7273 696f 6e00 2e67  ..gnu.version..g</br>
+> 911 000038e0: 6e75 2e76 6572 7369 6f6e 5f72 002e 7265  nu.version_r..re</br>
+> 912 000038f0: 6c61 2e64 796e 002e 696e 6974 002e 706c  la.dyn..init..pl</br>
+> 913 00003900: 7400 2e70 6c74 2e67 6f74 002e 7465 7874  t..plt.got..text</br>
+> 914 00003910: 002e 6669 6e69 002e 726f 6461 7461 002e  ..fini..rodata..</br>
+> 915 00003920: 6568 5f66 7261 6d65 5f68 6472 002e 6568  eh_frame_hdr..eh</br>
+> 916 00003930: 5f66 7261 6d65 002e 696e 6974 5f61 7272  _frame..init_arr</br>
+> 917 00003940: 6179 002e 6669 6e69 5f61 7272 6179 002e  ay..fini_array..</br>
+> 918 00003950: 6479 6e61 6d69 6300 2e64 6174 6100 2e62  dynamic..data..b</br>
+> 919 00003960: 7373 002e 636f 6d6d 656e 7400  <span style="border-bottom:3px solid red;">00</span>00 0000  ss..comment.....	以`\0`结束</br>
 
 ```shell
 # readelf -S 7_1
